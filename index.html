@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f8f8; margin: 0; }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-top: 50px; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            visibility: hidden;
+
+        }
+        h1, h2 { color: #333; }
+        .section { display: none; margin: 30px 0; }
+        img { width: 120px; height: 140px; border-radius: 60%; margin: 25px; }
+        .contact a { text-decoration: none; color: #007BFF; font-weight: bold; }
+        .menu { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
+        .menu button { padding: 10px 15px; border: none; background: hwb(176 17% 53%); color: white; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .menu button:hover { background: #0056b3; }
+        .table-container { display: flex; justify-content: center; align-items: center; margin-top: 20px; }
+        table { width: 80%; border-collapse: collapse; margin: auto; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .password-container { margin-top: 100px; }
+    </style>
+</head>
+<body>
+    <div class="password-container" id="passwordContainer">
+        <h2>請輸入密碼</h2>
+        <input type="password" id="passwordInput" placeholder="請輸入密碼">
+        <button onclick="checkPassword()">確認</button>
+    </div>
+
+    <div class="container">
+        <h1>關於我</h1>
+        <img src="me.jpg">
+        <p>👋 哈囉，我是【陳禹彤】！這裡是我的個人網站，歡迎來認識我！</p>
+        
+        <div class="menu">
+            <button onclick="showSection('contact')">自我介紹</button>
+            <button onclick="showSection('motivation')">申請動機</button>
+            <button onclick="showSection('experience')">多元表現及自主學習</button>
+            <button onclick="showSection('plan')">讀書計畫</button>
+            <button onclick="showSection('future')">反省及期許</button>
+        </div>
+
+        <div id="experience" class="section">
+            <h2><font color="#f00">多元表現及自主學習</font></h2>
+            <h2 align="left"><font color="#1936C9">多元表現</font></h2>
+            <p align="left">1.【校內課業】資訊科技排名前1%</p>
+            <p align="left">2.【校內課業】英文校排名前13.8%</p>
+            <p align="left">3.【校內課業】生活科技校排前9.9%</p>
+            <p align="left">4.【小論文寫作比賽】:*優等*,題目:臺南市登革熱病媒蚊指數關係探討</p>
+            <p align="left">5.【全民英檢】中級複試通過</p>
+            <p align="left">6.【TOEIC】640分</p>
+            <p align="left">7.【團隊比賽】校運400公尺接力: 第六名</p>
+            <p align="left">8.【團隊比賽】校運趣味競賽: 亞軍</p>
+            <h2 align="left"><font color="#1936C9">資訊類.自主學習</font></h2>
+            <p align="left">1.【成為Python數據分析達人的第一堂課】結業:ewant:蔡炎龍老師; 7小時/16周</p>
+            <p align="left">2.【C語言基礎課程】結業:udemy: 碼農 可愛老師; 22.5小時/16周</p>
+            <p align="left">3.【認識資訊科技】結業:ewant: 朱守禮,吳宜鴻老師; 6小時/8周</p>
+            <p align="left">4.【AI素養與思維】結業:ewant: 張志勇老師; 6小時/6周</p>
+            <h2 align="left"><font color="#1936C9">其他</font></h2>
+            <p align="left">1.【幹部及社團】: 擔任班級事務股長2年</p>
+            <p align="left">2.【幹部及社團】: 擔任班級副學藝股長1年</p>
+            <p align="left">3.【幹部及社團】: 參加科學研習社、桌遊社</p>     
+        </div>
+
+        <div id="future" class="section">
+            <h2> <font color="#f00">反省及期許</font></h2>
+            <h2 align="left"><font color="#1936C9">自我省思</font></h2>
+            <p align="left">1.高一就有基本的程式語言課程，學校教的是Python，在這門課其實我表現得非常優異，同學有不會的也都會問我。</p>
+            <p align="left">2.後來因為要寫小論文的關係，原本單純用EXCEL來做數值的迴歸分析，透過指導老師建議，上網自學了Python，發覺程式語言可以做的事情很多。也加深自己想要自學的念頭。</p>
+            <p align="left">3.後來高二是選擇3類組，除了必修的電腦課以外並沒有在學校接觸過其他資訊課，但分組後生物類科表現其實差強人意，發覺自己並不適合念三類！</p>
+            <p align="left">4.聽網路及新聞上說，目前半導體就業狀況很好，而且目前工廠都很先進，加上工業4.0及智慧製造，我便萌生使用數據科學協助工廠的想法。</p>
+            <p align="left">5.在探詢相關科系後，發學工業工程管理類組能同時兼顧較容易就業也有數據分析專業，因此加深想要就讀相關科系及意願。</p>
+            <p><br></p>
+            <p align="left">✨回顧高中這段時間，對於資訊科技，由喜歡到害怕又回到想要更深入了解，我發覺資訊科技要有應用場域，考量臺灣半導體的發展加上工業管理更是工廠所必須，因此萌生以資訊技術數據分能為主要技能，並利用到半導體相關領域上，以助於自己未來發展。</p>
+            <h2 align="left"><font color="#1936C9">未來期許</font></h2>
+            <p align="left">✨能夠有系統的學習電腦軟硬體相關知識！</p>
+            <p align="left">✨能夠建立自己程式軟體及相關硬體技能！</p>
+            <p align="left">✨自己能設計一個具有價值的軟體系統或是能設計一個能實際運作的IC電路！</p>
+            <p align="left">✨能確定自己在資訊業發展目標，考上研究所，並順利謀職或創業！</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2><font color="#f00">自我介紹</font></h2>
+            <p><font color="#1936C9">*我目前是台南市家齊高中高三學生*</font></p>
+            <P>個性活潑開朗，個性積極外向，<br>熱衷學習新知識，勇於面對困難</p>   
+        </div>
+
+        <div id="motivation" class="section">
+            <h2><font color="#f00">申請動機</font></h2>
+            <p><font color="#1936C9">*工業工程類科系就業較好，且同時兼顧工業管理及資料科學技能*</font></p>
+            <p>高二分組時以為自已適合念三類組，但是生物學科表現不優異，<br>考量工業工程類科系就業狀況好，所以想申請貴系學習相關課程！</P>
+        </div>
+
+        <div id="plan" class="section">
+            <h2><font color="#f00">讀書計畫</font></h2>
+            <div class="table-container"></div>
+            <table>
+                <tr>
+                    <th>時間</th>
+                    <th>目標</th>
+                    <th>方法</th>
+                </tr>
+                <tr>
+                    <td>開學前</td>
+                    <td>進一步了解工工系課程及發展</td>
+                    <td>★買台好一點的電腦 <br>★先自行學習工廠管理相關範圍 <br>★了解一下工工發展現況</td>
+                </tr>
+                <tr>
+                    <td>大一</td>
+                    <td>接觸正規工業管理入門訓練</td>
+                    <td>★專注課業,包含生產管理，作業研究，資料科學，人因工程等 <br>★多探詢工管領域內個人興趣 <br>★補足智慧製造所需能力</td>
+                </tr>
+                <tr>
+                    <td>大二</td>
+                    <td>專注自己有興趣的學程或課程，並培養對應能力</td>
+                    <td>★目前對於資料科學相關技能有興趣，要針對這部分加深加廣<br>★修習生產管理必備知識，以利將數據分析能力應用在業界</td>
+                </tr>
+                <tr>
+                    <td>大三</td>
+                    <td>製作專題或找尋實習機會</td>
+                    <td>★透過已學習到的知識或能力,在特定專題或比賽上展現<br>★檢視自己不足能力並且加強<br>★培養團隊合作經驗</td>
+                </tr>
+                <tr>
+                    <td>大四</td>
+                    <td>決定繼續升學或就業,並努力以赴</td>
+                    <td>★檢視自身能力及興趣,並判斷下階段目標<br>★向學校師長諮詢<br>★爭取校內外資源達到目標</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('experience').style.display = 'none';
+            document.getElementById('motivation').style.display = 'none';
+            document.getElementById('future').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('plan').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function checkPassword() {
+            var password = document.getElementById('passwordInput').value;
+            if (password === "1234") { 
+                document.getElementById('passwordContainer').style.display = 'none';
+                document.querySelector('.container').style.visibility = 'visible';
+            } else {
+                alert("密碼錯誤，請再試一次！");
+            }
+        }
+    </script>
+</body>
+</html>
